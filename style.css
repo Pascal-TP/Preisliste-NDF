@@ -72,7 +72,7 @@ img {
 }
 
 .logo {
-  width: 180px;
+  width: 350px;
   max-width: 48vw;
   background: rgba(255,255,255,0.96);
   padding: 14px 18px;
@@ -402,5 +402,20 @@ img {
 
   .split-image img {
     min-height: 260px;
+  }
+}
+
+.umfang-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background: #f3f4f6;
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+  .umfang-block {
+    grid-template-columns: 1fr;
   }
 }
