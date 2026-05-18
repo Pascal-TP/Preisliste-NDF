@@ -582,12 +582,12 @@ img {
 }
 
 /* Preis-Spalte in schmalen Kacheln sauber rechts ausrichten */
-.price-highlight-content .price-row > div:last-child {
+.price-highlight-content .price-row>div:last-child {
     text-align: right;
 }
 
 /* Einheit etwas kompakter halten */
-.price-highlight-content .price-row > div:nth-child(2) {
+.price-highlight-content .price-row>div:nth-child(2) {
     white-space: nowrap;
 }
 
@@ -597,16 +597,37 @@ img {
 }
 
 /* Preis-Spalte rechtsbündig */
-#regeltechnik .price-row > div:last-child {
+#regeltechnik .price-row>div:last-child {
     text-align: right;
 }
 
 /* Überschrift "Preis" ebenfalls rechts */
-#regeltechnik .price-head > div:last-child {
+#regeltechnik .price-head>div:last-child {
     text-align: right;
 }
 
 /* Einheit etwas kompakter */
-#regeltechnik .price-row > div:nth-child(2) {
+#regeltechnik .price-row>div:nth-child(2) {
     white-space: nowrap;
+}
+
+/* Menüleiste automatisch ein-/ausblenden */
+.sticky-nav {
+    transform: translateY(-110%);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sticky-nav.nav-visible {
+    transform: translateY(0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Oben eine unsichtbare Maus-Zone */
+.nav-hover-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 34px;
+    z-index: 19;
 }

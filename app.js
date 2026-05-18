@@ -232,3 +232,45 @@ function springeZuHashFallsVorhanden() {
     ziel.scrollIntoView({ behavior: "smooth", block: "start" });
   }, 150);
 }
+
+let navHideTimer;
+
+function initAutoHideNav() {
+  const nav = document.querySelector(".sticky-nav");
+  const hoverZone = document.getElementById("nav-hover-zone");
+
+  if (!nav || !hoverZone) return;
+
+  function showNav() {
+    nav.classList.add("nav-visible");
+    clearTimeout(navHideTimer);
+    navHideTimer = setTimeout(hideNav, 1800);
+  }
+
+  function hideNav() {
+    nav.classList.remove("nav-visible");
+  }
+
+  window.addEventListener("scroll", showNav, { passive: true });
+  hoverZone.addEventListener("mouseenter", showNav);
+  nav.addEventListener("mouseenter", () => {
+    nav.classList.add("nav-visible");
+    clearTimeout(navHideTimer);
+  });
+  nav.addEventListener("mouseleave", () => {
+    navHideTimer = setTimeout(hideNav, 800);
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      showNav();
+      navHideTimer = setTimeout(hideNav, 1400);
+    });
+  });
+
+  // Beim ersten Laden kurz anzeigen, dann ausblenden
+  nav.classList.add("nav-visible");
+  navHideTimer = setTimeout(hideNav, 1800);
+}
+
+document.addEventListener("DOMContentLoaded", initAutoHideNav);
