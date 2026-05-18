@@ -575,3 +575,18 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/* Schmalere Preis-Kacheln: mehr Platz für Bezeichnung */
+.price-highlight-content .price-row {
+    grid-template-columns: minmax(0, 1fr) 110px 120px;
+}
+
+/* Preis-Spalte in schmalen Kacheln sauber rechts ausrichten */
+.price-highlight-content .price-row > div:last-child {
+    text-align: right;
+}
+
+/* Einheit etwas kompakter halten */
+.price-highlight-content .price-row > div:nth-child(2) {
+    white-space: nowrap;
+}
