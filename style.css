@@ -725,73 +725,73 @@ img {
 }
 
 /* =========================
-   MOBILE TABELLENANSICHT
+   MOBILE TABELLENANSICHT FINAL
 ========================= */
 
 @media (max-width: 760px) {
     .price-table {
-        display: grid;
-        gap: 10px;
-        padding: 12px;
-        background: #f3f4f6;
+        display: grid !important;
+        gap: 12px !important;
+        padding: 12px !important;
+        background: #f3f4f6 !important;
     }
 
     .price-row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 4px;
-        padding: 14px 16px;
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: 14px;
+        display: block !important;
+        padding: 16px !important;
+        background: #fff !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 14px !important;
     }
 
     .price-row.price-head {
-        display: none;
+        display: none !important;
     }
 
-    .price-row > div {
-        min-width: 0;
-        overflow-wrap: anywhere;
-        word-break: normal;
+    .price-row>div {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        text-align: left !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+        margin-bottom: 10px;
     }
 
-    .price-row > div:nth-child(1)::before {
+    .price-row>div:last-child {
+        margin-bottom: 0;
+    }
+
+    .price-row>div:nth-child(1)::before {
         content: "Bezeichnung";
-        display: block;
-        font-size: 0.75rem;
-        font-weight: 700;
-        color: var(--muted);
-        margin-bottom: 2px;
     }
 
-    .price-row > div:nth-child(2)::before {
+    .price-row>div:nth-child(2)::before {
         content: "Einheit";
-        display: block;
-        font-size: 0.75rem;
-        font-weight: 700;
-        color: var(--muted);
-        margin-bottom: 2px;
     }
 
-    .price-row > div:nth-child(3)::before {
+    .price-row>div:nth-child(3)::before {
         content: "Preis";
-        display: block;
-        font-size: 0.75rem;
-        font-weight: 700;
-        color: var(--muted);
-        margin-bottom: 2px;
     }
 
-    .price-row > div:nth-child(3) {
-        margin-top: 4px;
-        font-size: 1.05rem;
+    .price-row>div::before {
+        display: block;
+        font-size: 0.74rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 4px;
+    }
+
+    .price-row>div:nth-child(3) {
+        font-size: 1.1rem;
         font-weight: 800;
         color: var(--dark);
-        text-align: left;
     }
 
     [data-price-id] {
-        text-align: left;
+        text-align: left !important;
     }
 }
