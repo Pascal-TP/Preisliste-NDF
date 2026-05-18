@@ -590,3 +590,23 @@ img {
 .price-highlight-content .price-row > div:nth-child(2) {
     white-space: nowrap;
 }
+
+/* Regeltechnik: Preis-Spalte sauber ausrichten */
+#regeltechnik .price-row {
+    grid-template-columns: minmax(0, 1fr) 150px 140px;
+}
+
+/* Preis-Spalte rechtsbündig */
+#regeltechnik .price-row > div:last-child {
+    text-align: right;
+}
+
+/* Überschrift "Preis" ebenfalls rechts */
+#regeltechnik .price-head > div:last-child {
+    text-align: right;
+}
+
+/* Einheit etwas kompakter */
+#regeltechnik .price-row > div:nth-child(2) {
+    white-space: nowrap;
+}
