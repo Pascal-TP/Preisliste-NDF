@@ -829,3 +829,36 @@ img {
         border-radius: var(--radius) var(--radius) 0 0;
     }
 }
+
+/* =========================
+   MOBILE STICKY SYSTEM-HEADER
+========================= */
+
+@media (max-width: 760px) {
+
+    .price-highlight-content,
+    .price-block {
+        overflow: visible;
+    }
+
+    .price-block-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-radius: var(--radius) var(--radius) 0 0;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    .price-highlight,
+    .price-block,
+    .price-highlight-content {
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 760px) {
+    .sticky-nav,
+    .nav-hover-zone {
+        display: none;
+    }
+}
