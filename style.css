@@ -650,14 +650,17 @@ img {
     border-radius: var(--radius-small);
 }
 
-/* Leere h4 als Platzhalter behalten */
+/* Überschriften im Umfangbereich */
 .umfang-block h4 {
-    min-height: 1.5em;
-    margin: 0 0 10px;
+    min-height: 0;
+    margin: 0 0 8px;
+    font-size: 1rem;
 }
 
-.umfang-block h4:empty::before {
-    content: "";
+/* Leere Überschriften nur als kleiner Abstandshalter */
+.umfang-block h4:empty {
+    height: 12px;
+    margin-bottom: 6px;
 }
 
 /* Umfang-Block über volle Breite */
@@ -667,4 +670,21 @@ img {
 
 .umfang-block-full>div {
     max-width: none;
+}
+
+/* Umfangbereich allgemein kompakter */
+.umfang-block {
+    font-size: 0.94rem;
+    line-height: 1.45;
+}
+
+/* Listen kompakter */
+.umfang-block ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Weniger Abstand zwischen Aufzählungspunkten */
+.umfang-block li {
+    margin-bottom: 4px;
 }
