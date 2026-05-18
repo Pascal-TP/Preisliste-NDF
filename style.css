@@ -631,3 +631,40 @@ img {
     height: 34px;
     z-index: 19;
 }
+
+/* Kachelinhalt vertikal sauber aufbauen */
+.price-highlight-content,
+.price-block {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hinweistext am Ende der Kachel */
+.price-note {
+    margin: auto 24px 24px;
+    padding: 14px 16px;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--muted);
+    background: #f7f7f7;
+    border-radius: var(--radius-small);
+}
+
+/* Leere h4 als Platzhalter behalten */
+.umfang-block h4 {
+    min-height: 1.5em;
+    margin: 0 0 10px;
+}
+
+.umfang-block h4:empty::before {
+    content: "";
+}
+
+/* Umfang-Block über volle Breite */
+.umfang-block-full {
+    grid-template-columns: 1fr;
+}
+
+.umfang-block-full>div {
+    max-width: none;
+}
