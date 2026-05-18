@@ -723,3 +723,75 @@ img {
 .qrcode-image a:hover {
     transform: scale(1.04);
 }
+
+/* =========================
+   MOBILE TABELLENANSICHT
+========================= */
+
+@media (max-width: 760px) {
+    .price-table {
+        display: grid;
+        gap: 10px;
+        padding: 12px;
+        background: #f3f4f6;
+    }
+
+    .price-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 14px 16px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+    }
+
+    .price-row.price-head {
+        display: none;
+    }
+
+    .price-row > div {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .price-row > div:nth-child(1)::before {
+        content: "Bezeichnung";
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 2px;
+    }
+
+    .price-row > div:nth-child(2)::before {
+        content: "Einheit";
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 2px;
+    }
+
+    .price-row > div:nth-child(3)::before {
+        content: "Preis";
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 2px;
+    }
+
+    .price-row > div:nth-child(3) {
+        margin-top: 4px;
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--dark);
+        text-align: left;
+    }
+
+    [data-price-id] {
+        text-align: left;
+    }
+}
