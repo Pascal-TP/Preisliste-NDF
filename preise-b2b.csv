@@ -1,12 +1,88 @@
 id;bezeichnung;preis;einheit
-tacker_20_2_wlg045;Tackerplatte 20-2 mm WLG045;22,55;je mÂ²
-tacker_30_3_wlg045;Tackerplatte 30-3 mm WLG045;23,10;je mÂ²
-tacker_30_2_wlg040;Tackerplatte 30-2 mm WLG040;23,34;je mÂ²
-tacker_30_wlg035;Tackerplatte 30 mm WLG035;24,30;je mÂ²
-hohlkammer_2mm;2 mm Hohlkammer-Platte;24,36;je mÂ²
-nur_rohr_bauseits;nur Rohr, DÃ¤mmung komplett bauseits;15,49;je mÂ²
-fraes_bis_29;FrÃ¤ssystem mit 10 cm VA bis 29 mÂ²;1250,00;pauschal
-fraes_bis_49;FrÃ¤ssystem mit 10 cm VA bis 49 mÂ²;42,60;je mÂ²
-fraes_ab_50;FrÃ¤ssystem mit 10 cm VA ab 50 mÂ²;35,00;je mÂ²
-baustelleneinrichtung;Baustelleneinrichtung;250,00;pro Einsatz
-entsorgungskosten;Entsorgungskosten;295,00;pauschal
+haus_tacker_20_2_wlg045;Tackerplatte 20-2 mm WLG045;;je m²
+haus_tacker_30_3_wlg045;Tackerplatte 30-3 mm WLG045;;je m²
+haus_tacker_30_2_wlg040;Tackerplatte 30-2 mm WLG040;;je m²
+haus_tacker_30_wlg035;Tackerplatte 30 mm WLG035;;je m²
+haus_hohlkammer_2mm;2 mm Hohlkammer-Platte;;je m²
+haus_nur_rohr_bauseits;nur Rohr, Dämmung komplett bauseits;;je m²
+haus_rohr_xc;Xc-/Xa-Rohr 16/17x2 mm;;je m²
+haus_rohr_alu;Metall/Aluverbundrohr 16x2 mm;;je m²
+roth_verbund_20_2_wlg035;Verbundplatte 20-2 mm WLG 035;;je m²
+roth_verbund_20_2_wlg040;Verbundplatte 20-2 mm WLG 040;;je m²
+roth_verbund_30_2_wlg040;Verbundplatte 30-2 mm WLG 040;;je m²
+roth_verbund_30_3_wlg045;Verbundplatte 30-3 mm WLG 045;;je m²
+roth_hohlkammer_2mm;2 mm Hohlkammer-Platte;;je m²
+roth_nur_rohr_bauseits;nur Rohr, Dämmung komplett bauseits;;je m²
+roth_xpert;X-PERT S5+ 17 mm;;je m²
+roth_duoplex;DUOPEX S5 17 mm;;je m²
+uponor_tacker_20_2_wlg040;Tackerplatte 20-2 mm WLG 040;;je m²
+uponor_tacker_30_2_wlg040;Tackerplatte 30-2 mm WLG 040;;je m²
+uponor_tacker_30_3_wlg045;Tackerplatte 30-3 mm WLG 045;;je m²
+uponor_tacker_35_3_wlg045; Tackerplatte 35-3 mm WLG 045;;je m²
+uponor_nur_rohr_bauseits;nur Rohr, Dämmung komplett bauseits;;je m²
+uponor_rohr_alu;MLCP Red Aluverbundrohr 16x2 mm;;je m²
+uponor_rohr_xa;Comfort Pipe Plus Xa-Rohr 17x2 mm;;je m²
+haus_klett;Komplettpreis Klettsystem Hausmarke;;je m²
+uponor_klett;Komplettpreis Klettsystem Uponor;;je m²
+unterdaemmung_20_035_100;EPS-Platten 20 mm in WLG035;;je m²
+unterdaemmung_30_035_100;EPS-Platten 30 mm in WLG035;;je m²
+unterdaemmung_40_035_100;EPS-Platten 40 mm in WLG035;;je m²
+unterdaemmung_50_035_100;EPS-Platten 50 mm in WLG035;;je m²
+unterdaemmung_60_035_100;EPS-Platten 60 mm in WLG035;;je m²
+unterdaemmung_70_035_100;EPS-Platten 70 mm in WLG035;;je m²
+unterdaemmung_80_035_100;EPS-Platten 80 mm in WLG035;;je m²
+unterdaemmung_90_035_100;EPS-Platten 90 mm in WLG035;;je m²
+unterdaemmung_100_035_100;EPS-Platten 100 mm in WLG035;;je m²
+fraes_bis_29;Frässystem mit 10 cm VA bis 29 m²;;pauschal
+fraes_bis_49;Frässystem mit 10 cm VA bis 49 m²;;je m²
+fraes_ab_50;Frässystem mit 10 cm VA ab 50 m²;;je m²
+baustelleneinrichtung;Baustelleneinrichtung;;pro Einsatz
+etagenzuschuss;Etagenzuschuss;;pauschal
+entsorgungskosten;Entsorgungskosten;;pauschal
+stromgenerator;Stromgenerator;;pauschal
+versiegelung;Versiegelungspauschale;;je m²
+haus_trocken_25_system;25 mm Systemplatte;;je m²
+haus_trocken_25_estrich;Einbauhöhe 25 mm;;je m²
+norit_trocken_te20;NORIT-TE 20 Therm-Element, 1200 x 600 x 20 mm;;je m²
+norit_trocken_te30;NORIT-TE 30 Therm-Element, 1200 x 600 x 30 mm;;je m²
+xps_trocken_500;Komplettpreis XPS 500 Trockenbauplatte;;je m²
+estrich_69;Flächen von 10 bis 69 m²;;pauschal
+estrich_109;Flächen von 70 bis 109 m²;;pauschal
+estrich_119;Flächen von 110 bis 119 m²;;je m²
+estrich_149;Flächen von 120 bis 149 m²;;je m²
+estrich_150;Flächen ab 150 m²;;je m²
+estrich_zusatz_fasern;Einbringung Polyprophylenfasern;;je m²
+estrich_zusatz_20;Zulage Schnellbinder 18-20 Tage;;je m²
+estrich_zusatz_14;Zulage Schnellbinder 10-14 Tage;;je m²
+estrich_zusatz_7;Zulage Schnellbinder 5-7 Tage;;je m²
+estrich_zusatz_xtreme;Retanol XTREME 3-7 Tage;;je m²
+estrich_zusatz_xthinn;Retanol Xthinn;;je m²
+thermo_10;ThermoWhite® WD 70 R/N bis 10 m³;;je m²
+thermo_11;ThermoWhite® WD 70 R/N ab 11 m³ jeder weitere m³;;je m²
+thermo_baustelleneinrichtung;Baustelleneinrichtung Thermowhite MixMobil;;pauschal
+hkv_2;HKV-D 2;;je Stk.
+hkv_3;HKV-D 3;;je Stk.
+hkv_4;HKV-D 4;;je Stk.
+hkv_5;HKV-D 5;;je Stk.
+hkv_6;HKV-D 6;;je Stk.
+hkv_7;HKV-D 7;;je Stk.
+hkv_8;HKV-D 8;;je Stk.
+hkv_9;HKV-D 9;;je Stk.
+hkv_10;HKV-D 10;;je Stk.
+hkv_11;HKV-D 11;;je Stk.
+hkv_12;HKV-D 12;;je Stk.
+hkv_schrank_unterputz_3;Verteilerschrank-Unterputz für 2 - 3 HK;;je Stk.
+hkv_schrank_unterputz_5;Verteilerschrank-Unterputz für 4 – 5 HK;;je Stk.
+hkv_schrank_unterputz_8;Verteilerschrank-Unterputz für 6 – 8 HK;;je Stk.
+hkv_schrank_unterputz_11;Verteilerschrank-Unterputz für 9 – 11 HK;;je Stk.
+hkv_schrank_unterputz_12;Verteilerschrank-Unterputz für 12 HK;;je Stk.
+hkv_schrank_aufputz_3;Verteilerschrank-Aufputz für 2 - 3 HK;;je Stk.
+hkv_schrank_aufputz_5;Verteilerschrank-Aufputz für 4 – 5 HK;;je Stk.
+hkv_schrank_aufputz_8;Verteilerschrank-Aufputz für 6 – 8 HK;;je Stk.
+hkv_schrank_aufputz_11;Verteilerschrank-Aufputz für 9 – 11 HK;;je Stk.
+hkv_schrank_aufputz_12;Verteilerschrank-Aufputz für 12 HK;;je Stk.
+klemmleiste_6;Regelklemmleiste 230 V + 24 V von bis zu 6 Zonen - Verbindung von bis zu max. 12 Stellantrieben, Hausmarke;;je Stk.
+klemmleiste_10;Regelklemmleiste 230 V von bis zu 10 Zonen - Verbindung von bis zu max. 18 Stellantrieben, Hausmarke;;je Stk.
+stellradantrieb;Stellantrieb Premium;;je Stk.
+thermostat_analog;RAUMTHERMOSTAT 230 V, HAUSMARKE - Aufputz / Analog;;je Stk.
+thermostat_lcd;RAUMTHERMOSTAT 230 V, HAUSMARKE - LCD-Display Standard;;je Stk.
