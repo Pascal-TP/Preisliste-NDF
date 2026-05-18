@@ -855,11 +855,10 @@ img {
 }
 
 /* =========================
-   MOBILE MENÜLEISTE FIXIEREN
+   MOBILE MENÜ UNTER HERO FESTSETZEN
 ========================= */
 
 @media (max-width: 760px) {
-
     .sticky-nav {
         position: sticky !important;
         top: 0 !important;
@@ -868,18 +867,21 @@ img {
         transform: none !important;
         transition: none !important;
 
-        background: rgba(255, 255, 255, 0.96);
+        background: rgba(255,255,255,0.96);
         backdrop-filter: blur(10px);
-
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
 
     .sticky-nav.nav-visible {
         transform: none !important;
     }
 
-    /* Maus-Zone mobil nicht nötig */
     .nav-hover-zone {
         display: none !important;
+    }
+
+    /* rote System-Header unter der mobilen Menüleiste kleben lassen */
+    .price-block-header {
+        top: 58px !important;
     }
 }
