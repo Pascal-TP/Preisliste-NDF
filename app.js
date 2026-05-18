@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", initPage);
 
 function initPage() {
   setupAccessForm();
-  setupChangeAccessButton();
 
   const priceTier = getPriceTier();
 
@@ -52,17 +51,6 @@ function setupAccessForm() {
     hideAccessOverlay();
     await ladePreise();
     springeZuHashFallsVorhanden();
-  });
-}
-
-function setupChangeAccessButton() {
-  const btn = document.getElementById("change-access-btn");
-  if (!btn) return;
-
-  btn.addEventListener("click", () => {
-    localStorage.removeItem(STORAGE_KEY);
-    leerePreisanzeige();
-    showAccessOverlay();
   });
 }
 
@@ -138,7 +126,21 @@ function renderPreise(daten) {
 
   document.querySelectorAll("[data-unit-id]").forEach((element) => {
     const id = element.dataset.unitId;
-    element.textContent = daten[id] ? daten[id].einheit : "-";
+
+    if (!daten[id]) {
+      element.textContent = "-";
+      return;
+    }
+
+    let einheit = daten[id].einheit;
+
+    // Fehlerhafte m²-Darstellungen korrigieren
+    einheit = einheit
+      .replace(/m�/g, "m²")
+      .replace(/m2/g, "m²")
+      .replace(/qm/g, "m²");
+
+    element.innerHTML = einheit;
   });
 }
 
