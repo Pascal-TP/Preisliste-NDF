@@ -795,3 +795,37 @@ img {
         text-align: left !important;
     }
 }
+
+/* =========================
+   MOBILE STICKY ÜBERSCHRIFTEN
+========================= */
+
+@media (max-width: 760px) {
+
+    .price-block-header {
+        position: sticky;
+        top: 0;
+        z-index: 8;
+    }
+
+    /* Schatten beim Scrollen */
+    .price-block-header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        height: 6px;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.12),
+            rgba(0,0,0,0)
+        );
+        pointer-events: none;
+    }
+
+    /* Runde Ecken oben behalten */
+    .price-block-header.compact {
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+}
