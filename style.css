@@ -855,21 +855,21 @@ img {
 }
 
 /* =========================
-   MOBILE MENÜ UNTER HERO FESTSETZEN
+   MOBILE MENÜ NUR UNTER HERO
 ========================= */
 
 @media (max-width: 760px) {
     .sticky-nav {
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 60 !important;
+        position: relative !important;
+        top: auto !important;
+        z-index: 20 !important;
 
         transform: none !important;
         transition: none !important;
 
-        background: rgba(255,255,255,0.96);
+        background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(10px);
-        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     }
 
     .sticky-nav.nav-visible {
@@ -880,8 +880,7 @@ img {
         display: none !important;
     }
 
-    /* rote System-Header unter der mobilen Menüleiste kleben lassen */
     .price-block-header {
-        top: 58px !important;
+        top: 0 !important;
     }
 }
