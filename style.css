@@ -688,3 +688,20 @@ img {
 .umfang-block li {
     margin-bottom: 4px;
 }
+
+/* TGA-Leistungsseite */
+.tga-section-logo {
+    width: min(360px, 80vw);
+    height: auto;
+    margin-top: 10px;
+}
+
+.tga-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 980px) {
+    .tga-grid {
+        grid-template-columns: 1fr;
+    }
+}
