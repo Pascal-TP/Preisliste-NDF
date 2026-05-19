@@ -118,10 +118,30 @@ function parseCSV(csvText) {
   return daten;
 }
 
+function formatPreis(preis) {
+  if (!preis) return "";
+
+  const sauber = String(preis)
+    .trim()
+    .replace(/\./g, "")
+    .replace(",", ".");
+
+  const zahl = Number(sauber);
+
+  if (Number.isNaN(zahl)) {
+    return preis;
+  }
+
+  return zahl.toLocaleString("de-DE", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
 function renderPreise(daten) {
   document.querySelectorAll("[data-price-id]").forEach((element) => {
     const id = element.dataset.priceId;
-    element.textContent = daten[id] ? `${daten[id].preis} €` : "auf Anfrage";
+    element.textContent = daten[id] ? `${formatPreis(daten[id].preis)} €` : "auf Anfrage";
   });
 
   document.querySelectorAll("[data-unit-id]").forEach((element) => {
@@ -134,11 +154,16 @@ function renderPreise(daten) {
 
     let einheit = daten[id].einheit;
 
-    // Fehlerhafte m²-Darstellungen korrigieren
+    // Fehlerhafte m²/m³-Darstellungen korrigieren
     einheit = einheit
+      // Quadratmeter
       .replace(/m�/g, "m²")
       .replace(/m2/g, "m²")
-      .replace(/qm/g, "m²");
+      .replace(/qm/g, "m²")
+
+      // Kubikmeter
+      .replace(/m3/g, "m³")
+      .replace(/cbm/g, "m³");
 
     element.innerHTML = einheit;
   });
