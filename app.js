@@ -82,8 +82,7 @@ async function ladePreise() {
       throw new Error(`${csvDatei} konnte nicht geladen werden.`);
     }
 
-    const buffer = await response.arrayBuffer();
-    const csvText = new TextDecoder("windows-1252").decode(buffer);
+    const csvText = await response.text();
     const daten = parseCSV(csvText);
 
     renderPreise(daten);
@@ -157,11 +156,8 @@ function renderPreise(daten) {
 
     // Fehlerhafte m²/m³-Darstellungen korrigieren
     einheit = einheit
-      // Quadratmeter
       .replace(/m2/g, "m²")
       .replace(/qm/g, "m²")
-
-      // Kubikmeter
       .replace(/m3/g, "m³")
       .replace(/cbm/g, "m³");
 
